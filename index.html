@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TravelPro helps you discover beaches, temples and cities around the world.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>TravelPro</title>
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <nav class="nav">
+      <a class="brand" href="#Home">Travel<span>Pro</span></a>
+
+      <div class="nav-links">
+        <a href="#Home">Home</a>
+        <a href="#About">About us</a>
+        <a href="#Contact">Contact</a>
+      </div>
+
+      <div class="search">
+        <input type="text" id="searchInput" placeholder="Try &quot;beach&quot;, &quot;temple&quot; or &quot;Japan&quot;" aria-label="Search destinations">
+        <button id="searchBtn" class="btn btn-small">Search</button>
+        <button id="resetBtn" class="btn btn-small btn-ghost">Reset</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home -->
+    <section class="hero" id="Home">
+      <div class="hero-inner">
+        <span class="eyebrow">Your next adventure starts here</span>
+        <h1>Explore Your <em>Dream</em> Destination</h1>
+        <p>
+          TravelPro helps you discover breathtaking places around the world,
+          from tropical beaches to vibrant cities. Find the best deals, book with ease,
+          and make memories that will last a lifetime.
+        </p>
+        <div class="hero-actions">
+          <a href="#Contact" class="btn btn-large">Book Now</a>
+          <a href="#About" class="btn btn-large btn-outline">Learn more</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search results -->
+    <section class="results-section" id="resultsSection" hidden>
+      <div class="container">
+        <h2 class="section-title" id="resultsTitle">Recommendations</h2>
+        <div id="results" class="results" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="About">
+      <div class="container">
+        <span class="eyebrow eyebrow-dark">About us</span>
+        <h2 class="section-title">Travel made easy, affordable and unforgettable</h2>
+        <p class="lead">
+          At TravelPro, our mission is simple: to make travel easy, affordable,
+          and unforgettable for everyone. We partner with trusted airlines, hotels,
+          and tour guides to bring you an experience tailored just for you.
+        </p>
+
+        <h3 class="subtitle">Our Team</h3>
+        <div class="team">
+          <article class="person">
+            <div class="avatar" aria-hidden="true">JD</div>
+            <h4>John Doe</h4>
+            <span class="role">CTO</span>
+            <p>John leads our technology team, ensuring our platform runs smoothly and securely.</p>
+          </article>
+          <article class="person">
+            <div class="avatar" aria-hidden="true">JS</div>
+            <h4>Jessica Smith</h4>
+            <span class="role">CEO</span>
+            <p>Jessica oversees strategy and partnerships, helping us grow and serve more travelers worldwide.</p>
+          </article>
+          <article class="person">
+            <div class="avatar" aria-hidden="true">MT</div>
+            <h4>Mike Tyson</h4>
+            <span class="role">Team Lead</span>
+            <p>Mike manages our travel consultants, making sure every customer has the best support possible.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="Contact">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <span class="eyebrow">Contact</span>
+          <h2 class="section-title light">Let's plan your trip</h2>
+          <p>Tell us where you want to go and our travel consultants will get back to you shortly.</p>
+        </div>
+
+        <form id="contactForm">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Enter your name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="Write your message" required></textarea>
+
+          <button type="submit" class="btn btn-large">Submit</button>
+          <p class="form-note" id="formNote" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> TravelPro. All rights reserved.</p>
+  </footer>
+
+  <script src="travel_recommendation.js"></script>
+</body>
+</html>
